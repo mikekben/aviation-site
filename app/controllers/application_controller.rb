@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   
   def hello
-    render html: "hello world, third time!"
+    render html: "from local"
   end
 end
