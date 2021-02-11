@@ -8,7 +8,13 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   def setup
     @base_title = "My Testing Project"
   end
-  
+
+  test "should get root" do
+    get static_pages_home_url
+    assert_response :success
+  end
+
+
   test "should get home" do
     get static_pages_home_url
     assert_response :success
