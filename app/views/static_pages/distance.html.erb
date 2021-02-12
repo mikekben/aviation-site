@@ -1,0 +1,21 @@
+<% provide(:title, "Distance Calculator") %>
+<% @first = rand_coord()%>
+<% @second = rand_coord()%>
+<h1>Distance Calculator</h1>
+<p>
+  This page provides two random geographic coordinates and computes the distance between them assuming the earth is a sphere.
+  In future, this computation will be adapted for the WGS84 ellipsoid.
+  The distance calculation can be expected to be correct within approximately 1% for most paths.
+</p>
+<p>
+  Coordinate 1: <%= @first%>
+</p>
+<p>
+  Coordinate 2: <%= @second%>
+</p>
+<p>
+  Distance: <%= distance(@first,@second)%>
+</p>
+<p>
+<a href=<%=gcmap_link(@first,@second)%>>Verify the results with GCMap.</a>
+</p>

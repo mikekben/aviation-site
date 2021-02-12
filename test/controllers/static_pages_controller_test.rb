@@ -6,7 +6,7 @@ require "test_helper"
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   def setup
-    @base_title = "My Testing Project"
+    @base_title = "Aviation Site"
   end
 
 
@@ -26,5 +26,11 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get about_path
     assert_response :success
     assert_select "title", "About | #{@base_title}"
+  end
+
+  test "should get distance" do
+    get distance_path
+    assert_response :success
+    assert_select "title", "Distance Calculator | #{@base_title}"
   end
 end

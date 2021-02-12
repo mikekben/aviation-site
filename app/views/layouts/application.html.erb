@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title)%> | My Testing Project</title>
+    <title><%= yield(:title)%> | Aviation Site</title>
     <meta charset="utf-8">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -17,12 +17,13 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "My Testing App", '#', id: "logo" %>
+        <%= link_to "Aviation Site", '#', id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "Home",   home_path %></li>
             <li><%= link_to "About",   about_path %></li>
             <li><%= link_to "Info", info_path %></li>
+            <li><%= link_to "Distance Calculator", distance_path %></li>
           </ul>
         </nav>
       </div>
