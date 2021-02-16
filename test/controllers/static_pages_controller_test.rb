@@ -1,8 +1,6 @@
 require "test_helper"
 
 
-
-
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   def setup
@@ -33,4 +31,5 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "Distance Calculator | #{@base_title}"
   end
+
 end
