@@ -15,4 +15,6 @@ class Airport < ApplicationRecord
     def location()
         Coordinate.new(lat,lon)
     end
+
+    # for the future: some methods display UI-friendly country names
 end
