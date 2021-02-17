@@ -10,6 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_02_17_000127) do
+
+  create_table "airports", force: :cascade do |t|
+    t.string "iata"
+    t.string "icao"
+    t.string "region"
+    t.string "airport_name"
+    t.string "city"
+    t.decimal "lat"
+    t.decimal "lon"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
