@@ -1,6 +1,8 @@
 #Citation: some validation operations found at https://guides.rubyonrails.org/active_record_validations.html
 #Regular expressions tested with https://regex101.com/
 
+require 'coordinate'
+
 class Airport < ApplicationRecord
     validates :iata, format: {with: /[A-Z]{3}/}
     validates :icao, format: {with: /[A-Z][A-Z0-9]{3}/}
@@ -9,4 +11,8 @@ class Airport < ApplicationRecord
     validates :city, presence: true
     validates :lat, presence: true, numericality: true
     validates :lon, presence: true, numericality: true
+
+    def location()
+        Coordinate.new(lat,lon)
+    end
 end

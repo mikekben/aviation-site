@@ -1,0 +1,26 @@
+<% provide(:title, "List") %>
+<h1>All Airports</h1>
+<p>More human-readable region (country, state/province/municipality) information is coming soon!</p>
+<ul>
+ <table style="width:100%">
+   <tr>
+    <th>IATA Code</th>
+    <th>ICAO Code</th>
+    <th>City</th>
+    <th>Airport Name</th>
+    <th>Region</th>
+    <th>Location</th>
+  </tr>
+
+<% @airports.each do | airport | %>
+ <tr>
+    <td><%= airport.iata %></td>
+    <td><%= airport.icao %></td>
+    <td><%= airport.city %></td>
+    <td><%= airport.airport_name %></td>
+    <td><%= airport.region %></td>
+    <td><%= airport.location().to_s %></td>
+  </tr>
+<% end %>
+  </table>
+</ul>
