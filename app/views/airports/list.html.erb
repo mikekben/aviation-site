@@ -11,7 +11,7 @@
     <th>Region</th>
     <th>Location</th>
   </tr>
-
+  
 <% @airports.each do | airport | %>
  <tr>
     <td><%= airport.iata %></td>
@@ -22,5 +22,6 @@
     <td><%= airport.location().to_s %></td>
   </tr>
 <% end %>
+
   </table>
 </ul>

@@ -1,7 +1,9 @@
 require "test_helper"
 
 class AirportsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get add" do
+    get add_path
+    assert_response :success
+  end
+
 end

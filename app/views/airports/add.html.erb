@@ -1,0 +1,34 @@
+<h1>Add Airport</h1>
+<p>Add an airport to the database.</p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_with(model: @airport, local: true) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+      <%= f.label :iata, "IATA Code" %>
+      <%= f.text_field :iata, class: 'form-control' %>
+
+      <%= f.label :icao, "ICAO Code" %>
+      <%= f.text_field :icao, class: 'form-control' %>
+
+      <%= f.label :city, "City Name"%>
+      <%= f.text_field :city, class: 'form-control' %>
+
+      <%= f.label :airport_name, "Airport Name"%>
+      <%= f.text_field :airport_name, class: 'form-control' %>
+
+      <%= f.label :region, "Region"%>
+      <%= f.text_field :region, class: 'form-control' %>
+
+      <%= f.label :lat, "Latitude"%>
+      <%= f.text_field :lat, class: 'form-control' %>
+
+      <%= f.label :lon, "Longitude" %>
+      <%= f.text_field :lon, class: 'form-control' %>
+
+
+      <%= f.submit "Add the airport", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
