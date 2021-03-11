@@ -1,4 +1,4 @@
-require 'coordinate'
+require 'Coordinate'
 module ApplicationHelper
 
     def distance(first,second)
@@ -8,6 +8,8 @@ module ApplicationHelper
     def rand_coord()
         Coordinate.random()
     end
+
+    
 
     def gcmap_link(first,second)
         "http://www.gcmap.com/mapui?P=#{first.no_spaces}-#{second.no_spaces}+&MS=wls&DU=km"

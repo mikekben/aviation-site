@@ -1,7 +1,7 @@
 #Citation: some validation operations found at https://guides.rubyonrails.org/active_record_validations.html
 #Regular expressions tested with https://regex101.com/
 
-require 'coordinate'
+require 'Coordinate'
 
 class Airport < ApplicationRecord
     validates :iata, uniqueness: true, format: {with: /[A-Z]{3}/}

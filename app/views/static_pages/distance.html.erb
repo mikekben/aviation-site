@@ -3,19 +3,48 @@
 <% @second = rand_coord()%>
 <h1>Distance Calculator</h1>
 <p>
-  This page provides two random geographic coordinates and computes the distance between them assuming the earth is a sphere.
-  In future, this computation will be adapted for the WGS84 ellipsoid.
+  To find the distance of a path, type the route in the box below and press "Compute distance." Routes should be specified by a series of IATA or ICAO codes separated by '-'.
+  For example, you can try "FRA-KORD-SCL-YMML"
   The distance calculation can be expected to be correct within approximately 1% for most paths.
 </p>
-<p>
-  Coordinate 1: <%= @first%>
-</p>
-<p>
-  Coordinate 2: <%= @second%>
-</p>
-<p>
-  Distance: <%= distance(@first,@second)%>
-</p>
-<p>
-<a href=<%=gcmap_link(@first,@second)%>>Verify the results with GCMap.</a>
-</p>
+
+    <%= form_with(url: "/distance/calculate", method: 'put') do |f| %>
+
+      <%= f.label :query, "Route" %>
+      <%= f.text_field :query, class: 'form-control' %>
+      <%= f.submit "Compute distance", class: "btn btn-primary" %>
+    <% end %>
+
+<% if (!@pairs.nil?) && (@pairs.length() >= 1)%>
+
+<h3> <center> <%= @route %> </center> </h3>
+
+<ul>
+ <table style="width:100%">
+   <tr>
+    <th>Origin</th>
+    <th>Destination</th>
+    <th>Distance</th>
+    <th></th>
+  </tr>
+  
+<% @pairs.each do | pair | %>
+ <tr>
+    <td><%= pair.origin_label() %></td>
+    <td><%= pair.destination_label() %></td>
+    <td><%= "#{pair.distance().round()} km" %></td>
+    <td><a href=<%= pair.gcmap_link %>>View on GCMap</a></td>
+  </tr>
+<% end %>
+
+<tr>
+    <th>Total</th>
+    <th></th>
+    <th><%= "#{@total.round()} km" %></th>
+    <th><a href=<%= @total_path %>>View on GCMap</a></th>
+  </tr>
+
+  </table>
+</ul>
+
+<% end %>

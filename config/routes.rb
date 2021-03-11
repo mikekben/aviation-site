@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/info', to: 'static_pages#info'
   get '/about', to: 'static_pages#about'
   get '/distance', to: 'static_pages#distance'
+  put '/distance/calculate', to: 'static_pages#calculate'
   resources :airports
   get '/list', to: 'airports#list'
   get '/add', to: 'airports#add'

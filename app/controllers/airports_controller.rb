@@ -10,7 +10,7 @@ class AirportsController < ApplicationController
     end
 
     def create
-        @airport = Airport.new(airport_params)    # Not the final implementation!
+        @airport = Airport.new(airport_params)
         if @airport.save
           redirect_to list_path
         else
