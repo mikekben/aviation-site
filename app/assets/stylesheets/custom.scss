@@ -15,6 +15,7 @@
 
 body {
     padding-top: 60px;
+    background-color: lightcyan
   }
   
   section {
@@ -45,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
     text-align: center;
     color:blue;
-    text-shadow: 4px 4px lightblue;
+    font-weight: bold
   }
   
   h2 {
@@ -87,11 +88,19 @@ h1, h2, h3, h4, h5, h6 {
   /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid blue;
   width: 100%;
   margin-bottom: 15px;
  /* @include box_sizing; */
 }
+
+input[type="text"], textarea {
+
+  background-color : beige;
+  border-color : blue;
+
+}
+
 
 input {
   height: auto !important;
