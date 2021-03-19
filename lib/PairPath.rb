@@ -12,7 +12,8 @@ class PairPath
         if @origin.nil? || @destination.nil?
             0
         else
-            @origin.location().fast_distance_to(@destination.location)
+            #@origin.location().fast_distance_to(@destination.location)
+            @origin.location().accurate_distance(@destination.location)
         end
     end
 

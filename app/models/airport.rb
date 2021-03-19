@@ -16,5 +16,19 @@ class Airport < ApplicationRecord
         Coordinate.new(lat,lon)
     end
 
+    def country()
+        ISO3166::Country.new(region[0..1])
+    end
+
+    def subdivision()
+        country().subdivisions[region[3..]]
+    end
+    
+    def uiRegion()
+        "#{subdivision().name}, #{country().name}"
+    end
+
+    
+
     # for the future: some methods display UI-friendly country names
 end
