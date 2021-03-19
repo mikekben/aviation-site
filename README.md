@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aviation Site, created by Ben Mikek
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run this site locally, clone the repository, then intall the required gems
+$ bundle install --without production
+Then migrate and seed the database:
+``$ rails db:migrate``
+``$ rails db:seed``
+To test the functionality, run
+``$ rails test``
+And finally, to run the site,
+``$ rails server``
