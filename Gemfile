@@ -9,6 +9,10 @@ gem 'webpacker',  '4.2.2'
 gem 'turbolinks', '5.2.1'
 gem 'jbuilder',   '2.10.0'
 gem 'bootsnap',   '1.4.6', require: false
+
+# Countries gem was created by hexorx and is distributed under the MIT license
+# https://github.com/hexorx/countries
+
 gem 'countries'
 
 group :development, :test do
