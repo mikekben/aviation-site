@@ -25,7 +25,13 @@ class Airport < ApplicationRecord
     end
     
     def uiRegion()
-        "#{subdivision().name}, #{country().name}"
+        if country().nil?
+            region
+        elsif subdivision().nil?
+            country().name
+        else
+            "#{subdivision().name}, #{country().name}"
+        end
     end
 
     
