@@ -4,12 +4,38 @@
   Have you ever wondered about the three- and four- letter codes used to identify airports (mostly by airlines, and pilots, respectively)? This page gives a quick
   background on those codes.
 </p>
-<h2> IATA codes and ICAO codes</h2>
+<h2> IATA codes</h2>
 <p>
 The <a href=https://www.iata.org/ >International Air Transport Association</a> (IATA) is the industry representative for airlines around the world. It assigns 3-character codes
-to airports (and cities, a few trains stations, and some other areas of interest). These codes are assigned primarily to airports which have commercial service; they always consist
-of exactly three latin letters. The <a href=https://www.icao.int >International Civil Aviation Organization</a> (ICAO) is a United Nations body which assigns four-character codes
-to airports around the world. The prefixes of these codes reflect the location of the airport (for example, any code starting with K) is located in the United States, and any
-code starting with Z corresponds to an airport in China. Airports don't need to have commercial service to be assigned an ICAO code, and a few ICAO codes contain numbers,
-in addition to latin letters. There are many airports which have an ICAO code, but no IATA code, but there are just a handful of airports with an IATA code but no ICAO code.
+to airports (and cities, a few trains stations, and some other areas of interest). These codes are assigned primarily to airports which have commercial service, and are used
+primarily by airlines in booking systems, on boarding passes, etc. All IATA codes consist of exactly 3 characters from the 26 English letters (they are written capitalized
+by convention), making 17,576 codes theoretically possible. Most codes correspond roughly to the name of the city in which the airport they represent is located: MSP for 
+Minneapolis/St. Paul, SYD for Sydney, and HKG for Hong Kong. Some codes are based on the name of the airport rather than the city, for example CDG for Charles de Gaulle Airport in Paris,
+or GRU for São Paulo Guarulhos International Airport. Some codes have less clear lineages. Many large airports in Canada have codes starting with Y (YUL for Montreal, YYZ for Toronto, YVR for Vancouver)
+becuase they were adapted from previous 2-letter codes. Both of Beijing's airports have codes (PEK and PKX) which are based on an incorrect transilteration of the name Beijing.
+And some codes are avoided to prevent confusion with other conventions; for example, codes beginning with Q are avoided, leading to examples like UIO for Quito.
+</p>
+
+ <h2> ICAO codes </h2>
+<p>
+The <a href=https://www.icao.int >International Civil Aviation Organization</a> (ICAO) is a United Nations body which assigns four-character codes
+to airports around the world. Airports don't need to have commercial service to be assigned an ICAO code, and many ICAO codes contain numbers,
+in addition to English letters. There are many airports which have an ICAO code but no IATA code, but there are just a handful of airports with an IATA code but no ICAO code.
+In contrast to IATA codes which are often tied to the name of the city or airport they represent, ICAO codes follow a strict geographic hierarchy, where the first character
+represents a region, the second character a country, and the last two characters identify airports. For example, airports whose ICAO code begins with S are located in South
+America, while airport codes beginning with V represent south and southeast Asia. Some countries have so many airports that they are given their own single letter prefix:
+airports starting with K are in the continental United States, a Y prefix indicates Australia, and Z prefixes apply only to China, Mongolia, and North Korea.
+</p>
+
+<figure style="text-align:center">
+    <%= image_tag("ICAO.png", :height => 500, alt: "World regions colored by ICAO code first letter prefix") %> 
+    <figcaption>The world by first letter of ICAO airport codes. <a href=https://commons.wikimedia.org/wiki/File:ICAO_FirstLetter.svg> Created by Wikimedia user Hytar in 2013</a>, image in the public domain.</figcaption>
+</figure>
+
+
+<p></p>
+<p>
+As with any convention, there are exceptions. Airports in Alaska and Hawaii use the P prefix, like most Pacific Islands, but Saint Pierre and Miquelon, which is geographically
+part of North America, uses the LF prefix like the rest of France. Because of an ongoing dispute with Serbia, Pristina International Airport in Kosovo has the code BKPR, even
+though the B prefix is otherwise used only by Greenland and Iceland.
 </p>

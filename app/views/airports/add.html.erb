@@ -1,6 +1,5 @@
 <% provide(:title, "Add Airport") %>
 <h1>Add Airport</h1>
-<p>Add a new airport.</p>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -19,13 +18,13 @@
       <%= f.label :airport_name, "Airport Name"%>
       <%= f.text_field :airport_name, class: 'form-control' %>
 
-      <%= f.label :region, "Region"%>
+      <%= f.label :region, "Region (must be in ISO3166-2 format, for example US-IL or SI-012)"%>
       <%= f.text_field :region, class: 'form-control' %>
 
-      <%= f.label :lat, "Latitude"%>
+      <%= f.label :lat, "Latitude (must be a numeric value, for example 54.985 or -12.78)"%>
       <%= f.text_field :lat, class: 'form-control' %>
 
-      <%= f.label :lon, "Longitude" %>
+      <%= f.label :lon, "Longitude (must be a numeric value, for example 172.3 or -99.721648)" %>
       <%= f.text_field :lon, class: 'form-control' %>
 
 

@@ -4,8 +4,8 @@
 <h1>Distance Calculator</h1>
 <p>
   To find the distance of a path, type the route in the box below and press "Compute distance." Routes should be specified by a series of IATA or ICAO codes separated by '-'.
-  For example, you can try "FRA-KORD-SCL-YMML"
-  The distance calculation can be expected to be correct within approximately 1% for most paths.
+  For example, you can try "FRA-KORD-SCL-YMML" or "LJU-FRA-ORD".
+  Distance calculations are based on the WGS84 ellipsoid, and are carried out using <a href=https://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf> formulas developed by Thaddeus Vincenty (1975)</a>.
 </p>
 
     <%= form_with(url: "/distance/calculate", method: 'put') do |f| %>

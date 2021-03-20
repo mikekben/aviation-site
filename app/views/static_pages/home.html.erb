@@ -1,9 +1,25 @@
 <% provide(:title, "Home") %>
 <h1>Home</h1>
 <h3>  Welcome to the aviation site!</h3>
-<p>
-  The purpose of this site is to provide a user-editable database of airports, and to give you the ability to make calculations and learn more about airports and aviation.
-  Use the distance calculator to compute the length of a path traveled while flying through a number of airports. If your local airport is not yet included in the database,
-  you can add it in the Add Airport tab. You can also see a list of airports, and learn a bit more about airport codes.
+<p style="text-align:center"> 
+Modern aviation (at least in pre-pandemic times) combines the wonders of physics with the joys of traveling and brings people around the world closer together. 
+To make those amazing feats possible, the world has constructed an amazing amount of physical infrastructure--airports, aircraft, navigational beacons--and important abstractions
+to make keeping track of each complexity in running an international airline possible. One of the main abstractions is the use of airport codes to disambiguate locations used
+by airlines.
+
 </p>
-<%= image_tag("portugal.png", :height => 500, class: "center-block", alt: "Airplane wing flying over the coast of Portugal") %>    
+<figure style="text-align:center">
+    <%= image_tag("portugal.png", :height => 500, alt: "Airplane wing flying over the coast of Portugal") %> 
+    <figcaption>A view of the coast of Portugal in December 2019, from a TAP Air Portugal Airbus A320neo. ©2019 Ben Mikek</figcaption>
+</figure>
+
+
+<p></p>
+
+
+<p style="text-align:center">
+  This site provide a user-contributed database of airports, information about airports and airport codes, and a tool to compute the distance of a path between airports.
+  If you are interested in learning more about airport codes, check out the <a href=/info >Airport Codes</a> page. If you would like to contribute to the site,
+  you can view the <a href=/list >List</a> of airports already added, and then <a href=/add> Add </a> your own home airport.
+</p>
+

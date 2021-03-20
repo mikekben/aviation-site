@@ -1,6 +1,7 @@
 <% provide(:title, "List") %>
 <h1>Airport List</h1>
-<p>More human-readable region (country, state/province/municipality) information is coming soon!</p>
+<p>The database contains <%= @airports.count %> airports. You can help by <a href=/add> adding another</a>!</p>
+<hr>
 <ul>
  <table style="width:100%">
    <tr>
@@ -25,3 +26,8 @@
 
   </table>
 </ul>
+
+<figure style="text-align:center">
+    <%= image_tag("dfw.png", :height => 500, :width => 500, alt: "View of Dallas/Fort Worth International Airport from above") %> 
+    <figcaption>Dallas/Fort Worth International Airport (DFW/KDFW) in June 2019 from an American Airlines Boeing 737-800. ©2019 Ben Mikek</figcaption>
+</figure>

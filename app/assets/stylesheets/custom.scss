@@ -34,6 +34,17 @@ body {
     margin-bottom: 10px;
   }
 
+  hr{
+    height: 4px;
+    background-color: gray;
+    border: none;
+  }
+
+table, th, td {
+  border: 1px solid gray;
+}
+
+
   /* typography */
 
 h1, h2, h3, h4, h5, h6 {
